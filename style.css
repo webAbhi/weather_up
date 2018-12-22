@@ -9,7 +9,7 @@
   background-attachment: fixed;
   background-size: 100%;
   opacity:0.9;
-  filter: saturate(190%);
+  filter: saturate(150%);
 }
 #head{
   width: 70%;
@@ -17,6 +17,11 @@
 }
 h1{
   margin-bottom: 0;
+}
+#location{
+  width:70%;
+  margin:5%;
+  height:10%;
 }
 
 .content{
