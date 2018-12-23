@@ -13,7 +13,7 @@ app.post('/run',function(req,res){
   res.redirect('/')
 })
 
-app.get('/',function(req,res){
+app.get('/', function (req,res){
 
   request('http://api.openweathermap.org/data/2.5/weather?q='+location+'&units=metric&APPID=2cb188848466dee1ad22eefdd09126aa',function(error,response,body){
     if(!error  &&  response.statusCode==200){
