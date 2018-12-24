@@ -1,5 +1,28 @@
-<h1><%= data %></h1>
-<form action="/run" method="post">
-  <input type="text" name="place" placeholder="Enter the location">
-  <input type="submit" name="submit" value="submit the value">
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>weather_up</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id='main'>
+      <div class="top">
+        <h1>Weather Up</h1>
+        <hr size="10">
+      </div>
+      <div class="content">
+        <h2><%= data["temp"] %><span id="unit"><sup>o</sup>C</span></h2>
+        <h1><%=  data["name"] %></h1>
+
+      </div>
+      <form  class="text-center" action="/run" method="post" autocomplete="off">
+        <input type="text" name="place" placeholder="Enter the location"><br>
+        <input class ="btn btn-success mt-2" type="submit" name="submit" value="Submit">
+      </form>
+
+    </div>
+
+  </body>
+</html>
