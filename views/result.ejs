@@ -6,12 +6,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
+  <body onload="geoFindMe()">
     <div id='main'>
       <div class="top">
         <h1>Weather Up</h1>
         <hr size="10" >
       </div>
+      <div id="out"></div>
       <div class="content">
         <h2><%= data["temp"] %><span id="unit"><sup>o</sup>C</span></h2>
         <h1><%=  data["name"] %></h1>
@@ -22,7 +23,9 @@
         <input class ="btn btn-success mt-2" type="submit" name="submit" value="Submit">
       </form>
 
+
     </div>
 
   </body>
+  <script type="text/javascript" src="/js/page.js"></script>
 </html>

@@ -29,5 +29,10 @@ app.get('/', function (req,res){
     }
   })
 })
+// navigator.geolocation.getCurrentPosition(function(location) {
+//   console.log(location.coords.latitude);
+//   console.log(location.coords.longitude);
+//   console.log(location.coords.accuracy);
+// });
 
 app.listen(3000, () => console.log("app listening on port 3000"))
