@@ -1,2 +1,4 @@
 /node_modules
 background.jpg
+.env
+/views/js/key.js

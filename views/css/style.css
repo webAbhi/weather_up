@@ -33,8 +33,14 @@ h1{
   margin-top: 12%;
 }
 sup {
-    /* vertical-align: super; */
     font-size: smaller;
+}
+.message{
+  font-size: 28px;
+  visibility: hidden;
+}
+.apply{
+  visibility: visible;
 }
 #location{
   width:70%;
@@ -51,7 +57,3 @@ sup {
 #unit{
   font-weight:100;
 }
-/* form{
-  text-align: center;
-
-} */
