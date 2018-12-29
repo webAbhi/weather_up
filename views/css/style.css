@@ -1,19 +1,14 @@
 
-#main{
+/* #main{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height:100%;
-  background-image: url('background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  opacity:0.9;
-  filter: saturate(150%);
-}
+} */
 hr{
 	border-top: 2px double #75DA8B;
+  margin:0;
 }
 
 .top{
@@ -23,14 +18,13 @@ hr{
 }
 h1{
   margin-bottom: 0;
-
 }
 
 .content h2{
-  font-size: 700%;
+  font-size: 500%;
   text-align: center;
   font-weight:lighter;
-  margin-top: 12%;
+  margin: 12% 3%;
 }
 sup {
     font-size: smaller;

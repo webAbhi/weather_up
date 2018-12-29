@@ -1,17 +1,17 @@
-  window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
-      function positionFind(position){
-        //lat and long value passed in the geo function
-        geo(position.coords.latitude,position.coords.longitude)
-        pageShowed="true";
-      }
-      //check if browswer support geolocation
-      if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(positionFind)
-      }
-      localStorage.setItem("hasCodeRunBefore", true);
-    }
+function geoFindMe(){
+  function positionFind(position){
+    //lat and long value passed in the geo function
+    geo(position.coords.latitude,position.coords.longitude)
+    pageShowed="true";
   }
+  //check if browswer support geolocation
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(positionFind)
+  }
+  localStorage.setItem("hasCodeRunBefore", true);
+}
+
+
 function geo (lat,long){
   //axios is used to make a request from js file
   axios.get('https://maps.googleapis.com/maps/api/geocode/json?',{
