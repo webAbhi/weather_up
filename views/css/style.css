@@ -16,37 +16,24 @@ hr{
   margin-left: 2%;
   color: #2ecc72;
 }
-h1{
-  margin-bottom: 0;
-}
-
 .content h2{
-  font-size: 500%;
+  font-size: 400%;
   text-align: center;
-  font-weight:lighter;
-  margin: 12% 3%;
+  margin: 4% 3%;
 }
-sup {
-    font-size: smaller;
+.container{
+	margin: 10% 40%;
 }
 .message{
   font-size: 28px;
-  visibility: hidden;
-}
-.apply{
-  visibility: visible;
-}
-#location{
-  width:70%;
-  margin:5%;
-  height:10%;
+  transition: all 1s;
 }
 .content{
-  height:50%;
-  width:40%;
-  margin:5% auto;
-  border: 2px solid #535C68;
+  min-height:50%;
+  min-width:40%;
+  margin:10% auto;
   text-align: center;
+	box-sizing: border-box;
 }
 #unit{
   font-weight:100;

@@ -10,16 +10,16 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
-  <body onload="geoFindMe()">
+  <body>
     <div id='main'>
       <div class="top">
-        <h1>Weather Up <span class="message">x</span></h1>
+        <h1>Weather Up <span class="message"><%=  data["name"] %></span></h1>
         <hr size="10" >
       </div>
       <div id="out"></div>
       <div class="content">
         <h2><span id="temp"><%= data["temp"] %></span><span id="unit"><sup>o</sup>C</span></h2>
-        <h1 id ="location"><%=  data["name"] %></h1>
+        <h3 id ="location"><%=  data["name"] %></h3>
       </div>
       <form  class="text-center" action="/run" method="post" autocomplete="off">
         <input type="text" name="place" placeholder="Enter the location"><br>

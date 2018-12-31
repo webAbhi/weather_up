@@ -21,8 +21,8 @@ function geo (lat,long){
       result_type:'political',
     }
   }).then((response)=>{
-    document.querySelector('.message').innerHTML=response.data.results[1].address_components[1].long_name
-    document.querySelector('.message').style.visibility="visible"
+    document.querySelector('.message').textContent=response.data.results[1].address_components[1].long_name
+
     currentTemp(response.data.results[1].address_components[1].long_name)
   }).catch((error)=> {
     console.log(error);

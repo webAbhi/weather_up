@@ -31,7 +31,6 @@ app.get('/foam',function (req,res){
       console.log(data)
 
       res.render('result',{data:data})
-
     }
   })
 })
