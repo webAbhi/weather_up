@@ -1,42 +1,98 @@
-const unit="<sup>0</sup>";
 window.onload = function () {
   // if (localStorage.getItem("hasCodeRunBefore") === null) {
-    function positionFind(position){
-      //lat and long value passed in the geo function
-      geo(position.coords.latitude,position.coords.longitude)
-    }
-    //check if browswer support geolocation
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(positionFind)
-    }
-  //   localStorage.setItem("hasCodeRunBefore", true);
-  // }
+  async function positionFind(position){
+    //lat and long value passed in the weather function
+    await weather(position.coords.latitude,position.coords.longitude)
+  }
+  //check if browswer support geolocation
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(positionFind)
+  }
 }
-function geo (lat,long){
-  //axios is used to make a request from js file
-  axios.get('https://maps.googleapis.com/maps/api/geocode/json?',{
-    params:{
-      latlng:lat+','+long,
-      key:MAP_KEY,
-      result_type:'political',
+
+// function geo (lat,long){
+//   //axios is used to make a request from js file
+//   axios.get('https://maps.googleapis.com/maps/api/geocode/json?',{
+//     params:{
+//       latlng:lat+','+long,
+//       key:MAP_KEY,
+//       result_type:'political',
+//     }
+//   }).then((response)=>{
+//     console.log(response.data.results[0])
+//     assignValue('place',response.data.results[0])
+//     // .address_components[1].long_name
+//     // document.querySelector('.message').style.visibility="visible"
+//     // console.log(info)
+//     currentTemp(info.place)
+//   }).catch((error)=> {
+//     console.log(error);
+//   })
+
+// }
+let info
+async function weather(lat,lon){
+  // API call
+  let data=await fetch('http://api.openweathermap.org/data/2.5/weather?'+'&lat='+lat+'&lon='+lon+'&units=metric'+'&APPID='+WEATHER_KEY)
+  console.log("inside API")
+  const res= await data.json();
+  console.log(res)
+  let info={}
+  Object.defineProperties(info, {
+    name: {
+      value: res.name,
+      writable: false
+    },
+    temp: {
+      value: res.main.temp,
+      writable: false
+    },
+    humidity: {
+      value: res.main.humidity,
+      writable: false
+    },
+    pressure: {
+      value: res.main.pressure,
+      writable: false
+    },
+    description: {
+      value: res.weather[0].description,
+      writable: false
     }
-  }).then((response)=>{
-    document.querySelector('.message').innerHTML=response.data.results[0].address_components[1].long_name
-    document.querySelector('.message').style.visibility="visible"
-    currentTemp(response.data.results[0].address_components[1].long_name)
-  }).catch((error)=> {
-    console.log(error);
+  })
+  console.log(info)
+  var type=new Typed('#text',{
+      strings:[info.temp],
+      typeSpeed:120,
+
   })
 }
-function currentTemp(place){
-  axios.get('http://api.openweathermap.org/data/2.5/weather?',{
-    params:{
-      q:place,
-      units:"metric",
-      APPID:WEATHER_KEY
-    }
-  }).then((response)=>{
-    document.querySelector('#text').innerHTML='<p>'+response.data.main.temp +'<sup>o</sup>'+ 'C' +'</p>'
-    document.querySelector('.location').textContent=place;
-  })
-}
+// let x;
+// function currentWeather(lati,long){
+//   axios.get('http://api.openweathermap.org/data/2.5/weather?',{
+//     params:{
+//       lat:lati,
+//       lon:long,
+//       units:"metric",
+//       APPID:WEATHER_KEY
+//     }
+//   }).then((response)=> {
+//
+//
+//   }).catch((error)=> {
+//     console.log(error)
+//   })
+// }
+// console.log(x)
+// let typr=new Typed ('#text',{
+//   strings:[info.temp,info.humidity,info.pressure],
+//   typeSpeed:120,
+// });
+// x = JSON.parse(JSON.stringify(response.data.main))
+// Object.assign(info,x)
+// console.log(response.data.main)
+// x = JSON.parse(response);
+// new Typed ('#text',{
+//   strings:["message"],
+//   typeSpeed:120,
+// })

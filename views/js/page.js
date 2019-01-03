@@ -22,7 +22,6 @@ function geo (lat,long){
     }
   }).then((response)=>{
     document.querySelector('.message').textContent=response.data.results[1].address_components[1].long_name
-
     currentTemp(response.data.results[1].address_components[1].long_name)
   }).catch((error)=> {
     console.log(error);

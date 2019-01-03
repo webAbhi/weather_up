@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>weather_up</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -14,18 +14,15 @@
     </div>
     <div class="content container">
       <h2 id="text"></h2>
-      <h3 class="location"></h3>
     </div>
 
     <form  class="text-center" action="/run" method="post" autocomplete="off">
       <input type="text" name="place" placeholder="Enter the location"><br>
       <input class ="btn btn-success mt-2" type="submit" name="submit" value="Submit">
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="/js/key.js"></script>
     <script type="text/javascript" src="/js/initial.js"></script>
-
-
-
   </body>
 </html>
