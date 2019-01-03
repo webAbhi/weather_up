@@ -67,32 +67,3 @@ async function weather(lat,lon){
 
   })
 }
-// let x;
-// function currentWeather(lati,long){
-//   axios.get('http://api.openweathermap.org/data/2.5/weather?',{
-//     params:{
-//       lat:lati,
-//       lon:long,
-//       units:"metric",
-//       APPID:WEATHER_KEY
-//     }
-//   }).then((response)=> {
-//
-//
-//   }).catch((error)=> {
-//     console.log(error)
-//   })
-// }
-// console.log(x)
-// let typr=new Typed ('#text',{
-//   strings:[info.temp,info.humidity,info.pressure],
-//   typeSpeed:120,
-// });
-// x = JSON.parse(JSON.stringify(response.data.main))
-// Object.assign(info,x)
-// console.log(response.data.main)
-// x = JSON.parse(response);
-// new Typed ('#text',{
-//   strings:["message"],
-//   typeSpeed:120,
-// })
