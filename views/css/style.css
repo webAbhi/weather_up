@@ -1,26 +1,19 @@
-hr{
-	border-top: 2px double #75DA8B;
-  margin:0;
-}
 .top{
-  width: 70%;
   margin-left: 2%;
   color: #2ecc72;
 }
-.content h2{
-  font-size: 400%;
-  text-align: center;
-  margin: 4% 3%;
-}
 .container{
-	margin: 10% 40%;
+	margin: 1% 40%;
 }
 .message{
   font-size: 28px;
   transition: all 1s;
 }
 .content{
-  margin:10% auto;
+  margin:1% auto;
   text-align: center;
 	box-sizing: border-box;
+}
+#form{
+	margin:0 10%;
 }
