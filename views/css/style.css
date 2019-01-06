@@ -1,17 +1,9 @@
-body{
-	padding: 0;
-	margin: 0;
-}
 .top{
   margin-left: 2%;
   color: #2ecc72;
 }
-.message{
-  font-size: 28px;
-  transition: all 1s;
-}
 .content{
-	margin:5% 35%;
+	margin:5% 30%;
 }
 #form{
 	margin:0 10% 10% 10%;
@@ -20,13 +12,9 @@ body{
 ul li {
 	font-size: 200%;
 	line-height: 200%;
+	letter-spacing: 2px;
 }
-/* #footer{
-	right: 0;
-	left: 0;
-	bottom: 0;
-} */
 #footer{
 	padding: 0;
-
+	background-color:#eceff1;
 }

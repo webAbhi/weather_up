@@ -16,6 +16,6 @@ async function weather(lat,lon){
   document.querySelector('li:nth-child(1)').innerHTML="Location:"+res.name+', '+res.sys.country;
   document.querySelector('li:nth-child(2)').innerHTML="Temperature:"+res.main.temp+"<sup>o</sup>C";
   document.querySelector('li:nth-child(3)').innerHTML="Description:"+res.weather[0].description;
-  document.querySelector('li:nth-child(4)').innerHTML="Humidity:"+res.main.humidity;
-  document.querySelector('li:nth-child(5)').innerHTML="Pressure:"+res.main.pressure+" hpa";
+  document.querySelector('li:nth-child(5)').innerHTML="Humidity:"+res.main.humidity;
+  document.querySelector('li:nth-child(4)').innerHTML="Pressure:"+res.main.pressure+" hpa";
 }
