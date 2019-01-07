@@ -19,6 +19,7 @@ app.get('/', function (req,res){
   res.render("initial")
 })
 // requesting the data from API
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 app.get('/foam',function (req,res){
   request('http://api.openweathermap.org/data/2.5/weather?q='+location+'&units=metric&APPID='+process.env.WEATHER_KEY,function(error,response,body){
     if(!error  &&  response.statusCode==200){
@@ -30,8 +31,6 @@ app.get('/foam',function (req,res){
         "pressure":newbody.main.pressure,
         "name":newbody.name+', '+newbody.sys.country
       };
-      console.log(newbody)
-
       res.render('result',{data:data})
     }
   })
