@@ -20,7 +20,7 @@ app.get('/', function (req,res){
 })
 // requesting the data from API
 app.get('/foam',function (req,res){
-  request('http://api.openweathermap.org/data/2.5/weather?q='+location+'&units=metric&APPID='+process.env.WEATHER_KEY,function(error,response,body){
+  request('https://api.openweathermap.org/data/2.5/weather?q='+location+'&units=metric&APPID='+process.env.WEATHER_KEY,function(error,response,body){
     if(!error  &&  response.statusCode==200){
       let newbody=JSON.parse(body)
       let data={

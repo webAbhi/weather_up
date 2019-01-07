@@ -11,7 +11,7 @@ window.onload = function () {
 }
 async function weather(lat,lon){
   // API call
-  let data=await fetch('http://api.openweathermap.org/data/2.5/weather?'+'&lat='+lat+'&lon='+lon+'&units=metric'+'&APPID='+WEATHER_KEY)
+  let data=await fetch('https://api.openweathermap.org/data/2.5/weather?'+'&lat='+lat+'&lon='+lon+'&units=metric'+'&APPID='+WEATHER_KEY)
   const res= await data.json();
   document.querySelector('li:nth-child(1)').innerHTML="Location: "+res.name+', '+res.sys.country;
   document.querySelector('li:nth-child(2)').innerHTML="Temperature: "+res.main.temp+"<sup>o</sup>C";
