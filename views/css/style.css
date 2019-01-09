@@ -7,7 +7,6 @@
 }
 #form{
 	margin:0 10% 10% 10%;
-	padding-bottom: 6%;
 }
 ul li {
 	font-size: 200%;
@@ -17,14 +16,24 @@ ul li {
 #footer{
 	padding: 0;
 	background-color:#eceff1;
+  width: 100%;
+  box-sizing: border-box;
+
 }
 @media (max-width:700px) {
 	.list{
 		letter-spacing:normal;
-		font-size: 150%;
+		font-size: 120%;
 	}
+  #footer{
+    bottom: 0;
+    position: fixed;
+  }
+  .top a h1{
+    font-size: 40px;
+  }
 	.content{
-		margin:10% 15%;
+		margin:5% 10%;
 	}
 
 }
