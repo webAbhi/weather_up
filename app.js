@@ -32,6 +32,9 @@ app.get('/foam',function (req,res){
       };
       res.render('result',{data:data})
     }
+    else{
+      res.render('error')
+    }
   })
 })
 app.listen(port, () => console.log("app listening on port 3000"))
